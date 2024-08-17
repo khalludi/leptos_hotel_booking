@@ -1,0 +1,12 @@
+[package]
+name = "leptos_hotel_booking"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+console_error_panic_hook = "0.1.7"
+icondata = "0.4.0"
+leptos = { version = "0.6.14", features = ["csr", "nightly"] }
+leptos_icons = "0.3.1"
+thaw = { version = "0.3.3", features = ["csr"] }
+chrono = "0.4.38"
