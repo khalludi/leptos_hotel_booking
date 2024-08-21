@@ -1,17 +1,23 @@
 
+pub(crate) fn get_hotel(id: usize) -> Option<Hotel> {
+    get_hotels().iter().find(|hotel| hotel.id == id).cloned()
+}
+
 pub(crate) fn get_hotels() -> Vec<Hotel> {
     vec![
         Hotel {
+            id: 12,
             image_url: String::from("https://a0.muscache.com/im/pictures/49cce853-d7f4-4571-9808-c2bc8c806728.jpg?im_w=960"),
             name: String::from("Tokyo Kids Castle"),
             beds: 7,
             rating: 5.0,
             review_count: 109,
             city: String::from("Nakano City"),
-            price: 645,
+            price: 339,
             place: Place::Other,
         },
         Hotel {
+            id: 16,
             image_url: String::from("https://a0.muscache.com/im/pictures/7ab6a8ba-9745-4d31-8d9e-44ffc8ef3eae.jpg?im_w=960"),
             name: String::from("Kyomachiya Building Rental Inn"),
             city: String::from("Kyoto"),
@@ -24,7 +30,9 @@ pub(crate) fn get_hotels() -> Vec<Hotel> {
     ]
 }
 
+#[derive(Clone)]
 pub(crate) struct Hotel {
+    pub id: usize,
     pub name: String,
     pub city: String,
     pub price: i32,
@@ -35,6 +43,7 @@ pub(crate) struct Hotel {
     pub place: Place,
 }
 
+#[derive(Clone)]
 pub(crate) enum Place {
     Townhouse,
     Apartment,
