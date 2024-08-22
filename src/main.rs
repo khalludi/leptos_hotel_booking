@@ -18,7 +18,7 @@ fn App() -> impl IntoView {
     view! {
         <Router>
             <nav class="flex flex-row justify-center my-4">
-                <h3 class="font-bold text-2xl">Hotel Booking</h3>
+                <a href="/"><h3 class="font-bold text-2xl">Hotel Booking</h3></a>
             </nav>
             <main>
                 <Routes>
